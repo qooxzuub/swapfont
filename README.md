@@ -1,6 +1,6 @@
 # **swapfont**
 > **A PDF font replacer**
-<img align="right" width="100" src="https://raw.githubusercontent.com/qooxzuub/pdfbeaver/main/.github/assets/swapfont.svg">
+<img align="right" width="100" src="https://raw.githubusercontent.com/qooxzuub/swapfont/main/.github/assets/swapfont.svg">
 
 [![PyPI](https://img.shields.io/pypi/v/swapfont)](https://pypi.org/project/swapfont/)
 [![CI](https://github.com/qooxzuub/swapfont/actions/workflows/ci.yml/badge.svg)](https://github.com/qooxzuub/swapfont/actions/workflows/ci.yml)

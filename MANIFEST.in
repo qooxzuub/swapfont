@@ -1,0 +1,35 @@
+# Include the essentials
+include pyproject.toml
+include *.md
+include LICENSE
+recursive-include docs *.py
+recursive-include docs *.rst
+recursive-include docs Makefile
+recursive-include examples *.py
+recursive-include docs *.css
+recursive-include examples *.json
+
+# Recursive rules (Grab everything inside these folders)
+graft tests
+graft src/pdfbeaver
+
+# EXCLUDE junk you don't want to ship
+#    (Prevents shipping local config files, cache, or temporary builds)
+global-exclude *.py[cod]
+global-exclude __pycache__
+global-exclude *.so
+global-exclude *~
+global-exclude \#*
+global-exclude .DS_Store
+global-exclude .coverage
+exclude .gitignore
+
+prune tests/.hypothesis
+prune .github
+prune tests/cache
+prune pdfs
+prune tests/test_artifacts
+prune test_artifacts
+
+# added by check-manifest
+include *.yaml

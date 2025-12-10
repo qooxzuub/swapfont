@@ -1,0 +1,19 @@
+{
+  "description": "Advanced replacement with custom scaling limits and unicode mapping.",
+  "rules": [
+    {
+      "source_font_name": "/BrokenFont",
+      "target_font_file": "fonts/Symbol.ttf",
+      "strategy_options": {
+        "min_scale": 80.0,
+        "max_scale": 120.0
+      },
+      "encoding_map": {
+        "0x01": "A",
+        "0x02": "B",
+        "15": "space",
+        "LATIN SMALL LIGATURE FI": "fi"
+      }
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "description": "Standard replacement of Type 3 fonts with local TrueType files.",
+  "rules": [
+    {
+      "source_font_name": "/R136",
+      "target_font_file": "fonts/Roboto-Regular.ttf",
+      "target_font_name": "Roboto-Regular"
+    },
+    {
+      "source_font_name": "/R20",
+      "target_font_file": "fonts/Arial.ttf",
+      "target_font_name": "ArialMT"
+    }
+  ]
+}

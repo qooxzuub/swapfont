@@ -1,0 +1,70 @@
+[build-system]
+requires = ["setuptools>=65.5", "wheel", "setuptools_scm>=8.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "swapfont"
+dynamic = [ "version" ]
+description = "A tool for font replacement in PDFs."
+authors = [
+    { name = "qooxzoob", email = "154452450+qooxzuub@users.noreply.github.com" }
+]
+readme = {file = "README.md", content-type = "text/markdown"}
+license = "MPL-2.0"
+license-files = ["LICENSE"]
+requires-python = ">=3.10"
+dependencies = [
+    "pdfbeaver",
+    "pikepdf>=10.0.0",
+    "numpy",
+    "fonttools>=4.0,<5.0",
+    "click>=8.1,<9.0",
+    "pydantic>=2.0,<3.0",
+]
+
+[project.scripts]
+swapfont = "swapfont.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src", "."]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-coverage",
+    "hypothesis",
+    "black",
+    "pylint",
+    "pytest-mock",
+    "isort",
+    "deptry",
+    "reportlab",
+]
+docs=["sphinx>=7.0",
+    "sphinx-rtd-theme",
+    "myst-parser",
+    "sphinx-click",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/qooxzuub/swapfont"
+"Bug Tracker" = "https://github.com/qooxzuub/swapfont/issues"
+"Documentation" = "https://swapfont.readthedocs.io"
+
+[tool.isort]
+profile = "black"
+
+[tool.deptry]
+known_first_party = ["swapfont"]
+
+[tool.deptry.per_rule_ignores]
+DEP002 = [
+    "deptry", "pytest", "pytest-coverage", "black", "isort", "pylint", "pytest-mock", "hypothesis",
+    "sphinx-click", "myst-parser", "sphinx-rtd-theme", "sphinx", "reportlab",
+]
+
+[tool.setuptools_scm]
+write_to = "src/swapfont/_version.py"

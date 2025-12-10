@@ -13,3 +13,10 @@ User Guide
 
    cli
    examples
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Project Info
+
+   changelog
+

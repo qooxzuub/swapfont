@@ -1,6 +1,6 @@
 # **swapfont**
 > **A PDF font replacer**
-<img align="right" width="100" src="https://raw.githubusercontent.com/qooxzuub/pdfbeaver/main/.github/assets/swapfont.svg">
+<img align="right" width="150" src="https://raw.githubusercontent.com/qooxzuub/swapfont/main/.github/assets/swapfont.svg">
 
 [![PyPI](https://img.shields.io/pypi/v/swapfont)](https://pypi.org/project/swapfont/)
 [![CI](https://github.com/qooxzuub/swapfont/actions/workflows/ci.yml/badge.svg)](https://github.com/qooxzuub/swapfont/actions/workflows/ci.yml)
@@ -8,15 +8,14 @@
 [![Documentation Status](https://readthedocs.org/projects/swapfont/badge/?version=latest)](https://swapfont.readthedocs.io/en/latest/?badge=latest)
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/swapfont)](https://pypi.org/project/swapfont/)
 
-`swapfont` is a unified toolkit for analyzing and replacing legacy fonts (such as bitmapped Type 3 fonts) in PDF files with modern TrueType or OpenType fonts.
+`swapfont` is a command-line tool for analyzing and replacing legacy fonts (such as bitmapped Type 3 fonts) in PDF files with modern TrueType or OpenType fonts.
 
 It performs a **direct vector replacement** by rewriting PDF content streams. It automatically adjusts horizontal character scaling (Tz) to ensure the original visual layout—including text reflow and spacing—is preserved, even when the new font has significantly different metrics.
 
 ## **Features**
 
-* **Interactive Wizard:** A "dashboard" style CLI to quickly identify and replace fonts without writing config files.
-* **Content Stream Rewriting:** Replaces font names and character codes in text-showing operators (`Tj`, `'`, `"`).
-* **Layout Preservation:** Calculates `Tz` scaling to squash or stretch new text to fit the original bounding box (defaulting to a liberal 50%–200% range to ensure fit).
+* **Interactive Wizard:** An interactive mode to identify and replace fonts without writing config files.
+* **Layout Preservation:** Calculates horizontal rescaling to squash or stretch new text to fit the original bounding box (defaulting to a liberal 50%–200% range to ensure fit). For best results use a font with similar metrics to the original.
 * **Kerning Preservation:** Converts complex spacing arrays (`[ (A) 50 (V) ] TJ`) into explicit positioning (`Td`) if necessary to maintain exact spacing.
 * **TrueType Font Embedding:** Embeds the target font file into the resulting PDF.
 

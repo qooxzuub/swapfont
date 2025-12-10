@@ -10,6 +10,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Security
 
+## [0.1.2] - 2025-12-10
+### Fixed
+- Fix broken PyPI documentation
+
+
 ## [0.1.1] - 2025-12-10
 ### Fixed
 - Fix image URL in `README.md`
